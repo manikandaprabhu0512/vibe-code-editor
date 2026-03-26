@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -42,6 +43,7 @@ export default async function RootLayout({
           "font-sans",
           inter.variable,
         )}
+        suppressHydrationWarning
       >
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -52,7 +54,10 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <div className="flex flex-col min-h-screen">
+              <Toaster />
+              <div className="flex-1">{children}</div>
+            </div>
           </ThemeProvider>
         </body>
       </html>
