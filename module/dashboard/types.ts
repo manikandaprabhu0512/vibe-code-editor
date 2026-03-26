@@ -1,4 +1,4 @@
-import type { TemplateFile, UserRole } from "@prisma/client";
+import type { Templates, UserRole } from "@prisma/client";
 
 export interface User {
   id: string;
@@ -14,7 +14,7 @@ export interface Project {
   id: string;
   title: string;
   description: string | null;
-  template: TemplateFile;
+  template: Templates;
   createdAt: Date;
   updatedAt: Date;
   userId: string;
