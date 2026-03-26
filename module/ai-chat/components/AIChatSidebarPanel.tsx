@@ -498,12 +498,12 @@ export const AIChatSidePanel: React.FC<AIChatSidePanelProps> = ({
                           tokens={msg.tokens}
                         />
                       )}
-
                       <div className="prose prose-invert prose-sm max-w-none">
                         <ReactMarkdown
                           remarkPlugins={[remarkGfm, remarkMath]}
                           rehypePlugins={[rehypeKatex]}
                           components={{
+                            // @ts-ignore
                             code: ({ children, className, inline }) => {
                               if (inline) {
                                 return (
