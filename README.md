@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💻 Vibe Code Editor — AI-Powered In-Browser IDE
 
-## Getting Started
+A browser-based code editor that allows users to write, execute, and preview full-stack applications directly in the browser, enhanced with AI-assisted coding features and real-time execution using WebContainers.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- In-browser code execution using WebContainers (no local setup required)
+- Monaco Editor integration for a VS Code-like experience
+- Multi-framework support (React, Next.js, Express, Angular, Vue, Hono)
+- Instant web preview with automatic runtime initialization
+- Built-in terminal support inside the browser
+- AI-powered chatbot for coding assistance
+- Inline code suggestions to improve developer productivity
+- OAuth authentication (Google & GitHub)
+- Persistent user workspace with saved projects
+
+---
+
+## 🧠 System Overview
+
+The application simulates a lightweight cloud IDE by combining an in-browser runtime environment with an interactive code editor and AI assistance.
+
+### Flow
+
+1. User logs in via OAuth (Google/GitHub)
+2. User selects or creates a project from pre-built templates
+3. WebContainer initializes and runs the project inside the browser
+4. Monaco Editor enables real-time code editing
+5. Preview updates instantly as code changes
+6. AI assistant helps users with coding queries
+7. Projects are stored and accessible via user dashboard
+
+---
+
+## 🧩 Key Components
+
+- Editor Engine → Monaco Editor for code editing
+- Runtime Engine → WebContainers for in-browser execution
+- Preview Engine → Live rendering of running applications
+- AI Assistant → LLM-based chatbot for coding help
+- Auth System → OAuth-based authentication
+- Project Manager → Handles templates and user workspaces
+
+---
+
+## ⚙️ Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- Tailwind CSS
+- Monaco Editor
+
+### Runtime
+
+- WebContainers (StackBlitz)
+
+### Backend
+
+- Node.js
+- Express.js
+
+### AI
+
+- LLM APIs
+- Prompt-based assistance
+
+### Database
+
+- MongoDB
+
+### DevOps
+
+- Vercel (Frontend deployment)
+
+---
+
+## 🛠️ Setup
+
+1. Clone the repository
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Create `.env` file cp .env.example .env
+
+4. Add required credentials
+
+5. Run the application
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔗 Live Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- App: https://vibe-code-editor-ochre.vercel.app
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 💡 Key Learnings
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Built browser-based runtime environments using WebContainers
+- Integrated advanced code editors (Monaco) into web apps
+- Designed developer tools with real-time feedback loops
+- Implemented AI-assisted coding workflows
+- Managed multi-framework templates and execution environments
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Future Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Codebase-aware RAG for contextual AI suggestions
+- Real-time collaboration (multi-user editing)
+- Improved file system persistence
+- Plugin/extension support
+- Performance optimizations for large projects
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📌 Notes
+
+This project explores the intersection of developer tooling and AI by bringing a full coding environment into the browser with intelligent assistance.
